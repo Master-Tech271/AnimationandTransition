@@ -1,0 +1,21 @@
+.box{
+position: relative;
+background-color: blue;
+width: 200px;
+height: 200px;
+border: 0ch; 
+animation-name: myanimate; 
+animation-duration:4s;  
+animation-timing-function: ease-in;
+animation-fill-mode: forwards;
+animation-delay: 2s;
+animation-iteration-count: 2;
+}
+
+@keyframes myanimate{
+    0%{background-color: blue; left: 0px; top: 0px;}
+    25%{background-color: red; left: 300px; top: 0px;}
+    50%{background-color: green; left:300px; top: 250px; }
+    75%{background-color: yellow; left:0px; top: 250px;}
+    100%{background-color: blue; left: 0px; top: 0px;}
+}
