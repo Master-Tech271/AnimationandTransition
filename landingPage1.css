@@ -103,3 +103,16 @@ body{
     0%{top: -300px}
     100%{top: 125px;}
 }
+#logo2{
+    border-radius: 50%;
+    animation-name: logo2;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    animation-delay: .0s;
+    animation-direction: alternate;
+}
+@keyframes logo2{
+    0%{transform: rotateY(270deg); border-radius: 50%;}
+    100%{transform: rotateY(180deg); border-radius: 50%;}
+}
