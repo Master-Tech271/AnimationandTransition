@@ -133,62 +133,188 @@ body{
     top: 250px;
     line-height: 100px;
 }
-
-.f1{
+.fields1{
+    background: white;
+    position: relative;
+    top: 300px;
+    line-height: 100px;
+}
+.fields2{
+    background: white;
+    position: relative;
+    top: 350px;
+    line-height: 100px;
+}
+.fields .f1{
     position: relative;
     right: -1020px;
     animation-name: f1;
     animation-fill-mode: forwards;
     animation-duration: 3s;
 }
-.f2{
+.fields .f2{
     position: relative;
     right: -1020px;
     animation-name: f1;
     animation-fill-mode: forwards;
     animation-duration: 4s;
 }
-.f3{
+.fields .f3{
     position: relative;
     right: -1020px;
     animation-name: f1;
     animation-fill-mode: forwards;
     animation-duration: 5s;
 }
-.f4{
+.fields .f4{
     position: relative;
     right: -1020px;
     animation-name: f1;
     animation-fill-mode: forwards;
     animation-duration: 6s;
 }
-.f5{
+.fields .f5{
     position: relative;
     right: -1020px;
     animation-name: f1;
     animation-fill-mode: forwards;
     animation-duration: 7s;
 }
-.f6{
+.fields .f6{
     position: relative;
     right: -1020px;
     animation-name: f1;
     animation-fill-mode: forwards;
     animation-duration: 8s;
 }
-.f7{
+.fields .f7{
     position: relative;
     right: -1020px;
     animation-name: f1;
     animation-fill-mode: forwards;
     animation-duration: 9s;
 }
-.f8{
+.fields .f8{
     position: relative;
     right: -1020px;
     animation-name: f1;
     animation-fill-mode: forwards;
     animation-duration: 10s;
+}
+
+/* fields 1 */
+.fields1 .f1{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+}
+.fields1 .f2{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3.2s;
+}
+.fields1 .f3{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3.4s;
+}
+.fields1 .f4{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3.6s;
+}
+.fields1 .f5{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3.8s;
+}
+.fields1 .f6{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+}
+.fields1 .f7{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 4.2s;
+}
+.fields1 .f8{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 4.4s;
+}
+/* fields 2 */
+.fields2 .f1{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+}
+.fields2 .f2{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3.1s;
+}
+.fields2 .f3{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3.2s;
+}
+.fields2 .f4{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3.3s;
+}
+.fields2 .f5{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3.4s;
+}
+.fields2 .f6{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3.5s;
+}
+.fields2 .f7{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3.6s;
+}
+.fields2 .f8{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3.7s;
 }
 @keyframes f1{
     0%{right: -1200px;}
