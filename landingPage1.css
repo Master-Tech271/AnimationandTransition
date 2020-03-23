@@ -126,3 +126,71 @@ body{
     0%{transform: rotateY(270deg); border-radius: 50%;}
     100%{transform: rotateY(180deg); border-radius: 50%;}
 }
+
+.fields{
+    background: white;
+    position: relative;
+    top: 250px;
+    line-height: 100px;
+}
+
+.f1{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+}
+.f2{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+}
+.f3{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+}
+.f4{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 6s;
+}
+.f5{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 7s;
+}
+.f6{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 8s;
+}
+.f7{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 9s;
+}
+.f8{
+    position: relative;
+    right: -1020px;
+    animation-name: f1;
+    animation-fill-mode: forwards;
+    animation-duration: 10s;
+}
+@keyframes f1{
+    0%{right: -1200px;}
+    100%{right: 0;}
+}
