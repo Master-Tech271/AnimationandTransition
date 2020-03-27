@@ -110,21 +110,17 @@ body{
     animation-fill-mode: forwards;
     animation-duration: 1s;
     animation-delay: .0s;
-    animation-direction: alternate;
 }
 #logo3{
     border-radius: 50%;
     animation-name: logo2;
+    animation-duration: 5s;
+    animation-timing-function: step-start;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
-    animation-duration: 5s;
-    animation-delay: 2s;
 }
 @keyframes logo2{
-    0%{transform: rotateY(90deg); border-radius: 50%;}
-    25%{transform: rotateY(180deg);border-radius: 50%;}
-    25%{transform: rotateY(270deg);border-radius: 50%;}
-    100%{transform: rotateY(360deg); border-radius: 50%;}
+    0%{transform: rotateY(360deg);}
 }
 
 .fields{
