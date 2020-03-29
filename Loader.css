@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.preloader{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    margin: auto;
+
+}
+
+.logoloader{
+    border-radius: 50%;
+
+    position: relative;
+    animation-name: logo-preloader;
+    animation-timing-function: ease;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes logo-preloader{
+    0%{
+        top: -25%;
+        transition-delay: 3s;
+    }
+    25%{
+        top: -50%;
+        transition-delay: 3s;
+    }
+    50%{
+        top: -75%;
+        transition-delay: 3s;
+    }
+    100%{
+        top: -100%;
+        transition-delay: 3s;
+    }
+}
