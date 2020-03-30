@@ -10,13 +10,14 @@
 			height: 200px;
 			border: 1px solid;
 		}
-		#video{
+		#video, #photo{
 			width: 200px;
 			height: 175px;
 		}
 		#canvas{
 			width: 200px;
 			height: 175px;
+			display: none;
 		}
 		#take-photo{
 			text-decoration: none;
@@ -25,7 +26,8 @@
 			color: white;
 			width: 200px;
 			text-align: center;
-			margin-top: 175px;
+			position: absolute;
+			top : 213px;
 		}
 	</style>
 </head>
@@ -34,17 +36,20 @@
 <button class="btn btn-primary" data-target="#form123" data-toggle="collapse" id="up-hide">Upload</button>	
  <!-- image uploading code -->
 <div class="container collapse" id="form123">
-	<div id="main-content">
-		<video id="video"></video>
-		<a href="#" role="button" id="take-photo" width="200px">Take Photo</a>
-		<canvas id="canvas"></canvas>
+	<div class="row">
+		<div id="main-content" class="col-xs-12">
+			<video id="video"></video>
+			<img src="" id="photo">
+			<a href="#" role="button" id="take-photo">Take Photo</a>
+			<canvas id="canvas"></canvas>
+		</div>
+		<form action="#" class="col-xs-12">
+			<input type="file" name="image-up">
+			<i class="btn btn-primary" id="camera-user-open"> Camera </i>
+			 <br/><br/>
+			<button class="btn btn-primary" type="submit">Submit</button>
+		</form>
 	</div>
-	<form action="#">
-		<input type="file" name="image-up">
-		<i class="btn btn-primary" id="camera-user-open"> Camera </i>
-		 <br/><br/>
-		<button class="btn btn-primary" type="submit">Submit</button>
-	</form>
 </div>
 
 
@@ -59,6 +64,7 @@
 		$('#camera-user-open').click(function(){
 			$('#main-content').toggle();
 			$('#video').css('display', 'block');
+			$('#photo').css('display', 'none');
             var video = document.getElementById("video"),
             canvas = document.getElementById('canvas'),
             /*photo = document.getElementById('photo'),*/
@@ -86,8 +92,9 @@
 
              document.getElementById('take-photo').addEventListener('click', function(){
              	 $('#video').css('display', 'none');	
-                 context.drawImage(video, 0, 0, 200, 200);
-                 /*photo.setAttribute('src', canvas.toDataURL('image/png'));*/
+             	 $('#video').css('display', 'block');	
+                 context.drawImage(video, 0, 0, 200, 175);
+                 photo.setAttribute('src', canvas.toDataURL('image/png'));
              });
        
 		});
