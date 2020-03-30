@@ -11,6 +11,7 @@
     </style>
 </head>
 <body>
+    <input type="file">
     <div class="booth">
         <video src="" width="400" height="300" id="video"></video>
         <button id="btn">Take Photo</button>
@@ -39,6 +40,7 @@
             },
              function(error){
                  //error code
+                 alert('error');
              });
 
              document.getElementById('btn').addEventListener('click', function(){
