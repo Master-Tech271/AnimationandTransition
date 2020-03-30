@@ -87,6 +87,7 @@
 					alert('Please Upload Image');
 					return false;
 				}
+                alert($('#imgi').val());
 				alert(fd);
 				$.ajax({
 				    type: "POST",
@@ -111,6 +112,7 @@
 			$('#main-content').toggle();
 			$('#video').css('display', 'block');
 			$('#photo').css('display', 'none');
+            $('#main-content').css('border', '1px solid black');
 			$('#take-photo').css('display', 'inline-block');
             var video = document.getElementById("video"),
             canvas = document.getElementById('canvas'),
