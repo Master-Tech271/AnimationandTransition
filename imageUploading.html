@@ -7,6 +7,7 @@
     <style>
         #video, #canvas{
             border: 1px solid black;
+           
         }
     </style>
 </head>
@@ -14,9 +15,9 @@
     <input type="file">
      	<input id="file" type="file" accept="image/*">
     <div class="booth">
-        <video src="" width="400" height="300" id="video"></video>
+        <video src="" width="100vw" height="100vh" id="video"></video><br>
         <button id="btn">Take Photo</button>
-        <canvas id="canvas" width="400" height="300"></canvas>
+        <canvas id="canvas" width="100vw" height="100vh"></canvas>
         <img src="" alt="your photo" id="photo">
     </div>
 
@@ -43,7 +44,7 @@
             },
              function(error){
                  //error code
-                 alert('error');
+                 alert('Your browser does not support or your camera is not available');
              });
 
              document.getElementById('btn').addEventListener('click', function(){
