@@ -12,6 +12,7 @@
 </head>
 <body>
     <input type="file">
+     	<input id="file" type="file" accept="image/*">
     <div class="booth">
         <video src="" width="400" height="300" id="video"></video>
         <button id="btn">Take Photo</button>
@@ -35,7 +36,7 @@
                 audio: false
             },
             function(stream) {
-                video.src = vendorURL.createObjectURL(stream);
+                video.srcObject = stream;
                 video.play();
             },
              function(error){
