@@ -141,10 +141,10 @@
              	 $('#video').css('display', 'none');	
              	 $('#take-photo').css('display', 'none');
              	 $('#photo').css('display', 'block');	
-                 context.drawImage(video, 0, 0, 200, 175);
+                 $('#main-content').css('border', 'none');
+                 context.drawImage(video, 0, 0, 200, 200);
                  photo.setAttribute('src', canvas.toDataURL('image/png'));
                  var upld = document.getElementById('upld');
-                // $('input [type=file]').val(canvas.toDataURL('image/png'));
              });
        
 		});
