@@ -83,10 +83,10 @@
 				e.preventDefault();
 				var fd = new FormData();
 				fd.append("image", canvas.toDataURL('image/png'));
-				if($('#imgi').val('')){
-					alert('Please Upload Image');
-					return false;
-				}
+				// if($('#imgi').val('')){
+				// 	alert('Please Upload Image');
+				// 	return false;
+				// }
                 alert($('#imgi').val());
 				alert(fd);
 				$.ajax({
