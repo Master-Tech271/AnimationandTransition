@@ -70,9 +70,9 @@
 
 <script>
     
-	$(document).ready(function(e){
+	$(document).ready(function(){
 		//form
-		$('form').submit(function(){
+		$('form').submit(function(e){
 			if($('#photo').attr('src')==''){
 				if($('#imgi').val('')){
 					alert('Please Upload Image');
