@@ -48,7 +48,7 @@
              });
 
              document.getElementById('btn').addEventListener('click', function(){
-                 context.drawImage(video, 0, 0, 400, 300);
+                 context.drawImage(video);
                  photo.setAttribute('src', canvas.toDataURL('image/png'));
              });
         })();
