@@ -6,7 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="file" accept="image/*">
-    <input type="file">
+    <video id="video" width="640" height="480"></video>
+    <br>
+    <button class="snap">Take photo</button>
+    <canvas id="canvas" width="640" height="640"></canvas>
+    <script>
+        var video = document.getElementById('video');
+        if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+            navigator.mediaDevices.getUserMedia({video: true}).then(function(stream){
+                video.src = window.URL.createObjectURL(stream);
+            });
+        }
+
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+
+        document.getElementsByClassName('snap').addEventListener('click', function(){
+            context.drwaImage(video, 0, 0, 640, 480);
+        });
+    </script>
 </body>
 </html>
