@@ -1,4 +1,95 @@
 <!DOCTYPE html>
+<html>
+<head>
+	<title>Image Upload</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		#main-content{
+			display: none;
+			width: 200px;
+			height: 200px;
+			border: 1px solid;
+		}
+		#video{
+			display: none;
+		}
+		#take-photo{
+			text-decoration: none;
+			display: inline-block;
+			background: blue;
+			color: white;
+			width: 200px;
+			text-align: center;
+			margin-top: 175px;
+		}
+	</style>
+</head>
+<body>
+
+<button class="btn btn-primary" data-target="#form123" data-toggle="collapse" id="up-hide">Upload</button>	
+ <!-- image uploading code -->
+<div class="container collapse" id="form123">
+	<div id="main-content">
+		<video id="video" width="200px" height="200px"></video>
+		<a href="#" role="button" id="take-photo" width="200px">Take Photo</a>
+		<canvas width="200px" height="200px" id="canvas"></canvas>
+	</div>
+	<form action="#">
+		<input type="file" name="image-up">
+		<i class="btn btn-primary" id="camera-user-open"> Camera </i>
+		 <br/><br/>
+		<button class="btn btn-primary" type="submit">Submit</button>
+	</form>
+</div>
+
+
+ <!-- end -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+	$(document).ready(function(){
+		$('#up-hide').click(function(){$('#main-content').css('display', 'none')});
+		$('#camera-user-open').click(function(){
+			$('#main-content').toggle();
+            var video = document.getElementById("video"),
+            canvas = document.getElementById('canvas'),
+            /*photo = document.getElementById('photo'),*/
+            context = canvas.getContext('2d'),
+            vendorURL = window.URL || window.webkitURL;
+
+            navigator.getMedia = navigator.getUserMedia ||
+                                 navigator.webkitGetUserMedia ||
+                                 navigator.mozGetUserMedia ||
+                                 navigator.msGetUserMedia;
+            
+            navigator.getMedia({
+                video : true,
+                audio: false
+            },
+            function(stream) {
+                video.srcObject = stream;
+                video.play();
+            },
+             function(error){
+                 //error code
+                 alert('Your browser does not support or your camera is not available');
+                 $('#main-content').toggle();
+             });
+
+             document.getElementById('take-photo').addEventListener('click', function(){
+                 context.drawImage(video, 0, 0, 100, 100);
+                 /*photo.setAttribute('src', canvas.toDataURL('image/png'));*/
+             });
+       
+		});
+	});
+</script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,7 +144,7 @@
              });
         })();
     </script>
-    <!-- <video id="video" width="640" height="480"></video>
+   <video id="video" width="640" height="480"></video>
     <br>
     <button class="snap">Take photo</button>
     <canvas id="canvas" width="640" height="640"></canvas>
@@ -71,6 +162,6 @@
         document.getElementsByClassName('snap').addEventListener('click', function(){
             context.drwaImage(video, 0, 0, 640, 480);
         });
-    </script> -->
+    </script> 
 </body>
-</html>
+</html> -->
