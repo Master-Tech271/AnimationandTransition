@@ -6,7 +6,42 @@
     <title>Document</title>
 </head>
 <body>
-    <video id="video" width="640" height="480"></video>
+    <div class="booth">
+        <video src="" width="400" height="300" id="video"></video>
+        <button id="btn">Take Photo</button>
+        <canvas id="canvas" width="400" height="300"></canvas>
+    </div>
+
+    <script>
+        (function() {
+            var video = document.getElementById("video"),
+            canvas = document.getElementById('canvas'),
+            context = canvas.getContext('2d'),
+            vendorURL = window.URL || window.webkitURL;
+
+            navigator.getMedia = navigator.getUserMedia ||
+                                 navigator.webkitGetUserMedia ||
+                                 navigator.mozGetUserMedia ||
+                                 navigator.msGetUserMedia;
+            
+            navigator.getMedia({
+                video : true,
+                audio: false
+            },
+            function(stream) {
+                video.src = vendorURL.createObjectURL(stream);
+                video.play();
+            },
+             function(error){
+                 //error code
+             });
+
+             document.getElementById('btn').addEventListener('click', function(){
+                 context.drawImage(video, 0, 0, 400, 300);
+             });
+        })();
+    </script>
+    <!-- <video id="video" width="640" height="480"></video>
     <br>
     <button class="snap">Take photo</button>
     <canvas id="canvas" width="640" height="640"></canvas>
@@ -24,6 +59,6 @@
         document.getElementsByClassName('snap').addEventListener('click', function(){
             context.drwaImage(video, 0, 0, 640, 480);
         });
-    </script>
+    </script> -->
 </body>
 </html>
