@@ -92,7 +92,7 @@
 
              document.getElementById('take-photo').addEventListener('click', function(){
              	 $('#video').css('display', 'none');	
-             	 $('#video').css('display', 'block');	
+             	 $('#photo').css('display', 'block');	
                  context.drawImage(video, 0, 0, 200, 175);
                  photo.setAttribute('src', canvas.toDataURL('image/png'));
              });
