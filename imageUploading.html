@@ -11,7 +11,12 @@
 			border: 1px solid;
 		}
 		#video{
-			display: none;
+			width: 200px;
+			height: 175px;
+		}
+		#canvas{
+			width: 200px;
+			height: 175px;
 		}
 		#take-photo{
 			text-decoration: none;
@@ -30,9 +35,9 @@
  <!-- image uploading code -->
 <div class="container collapse" id="form123">
 	<div id="main-content">
-		<video id="video" width="200px" height="200px"></video>
+		<video id="video"></video>
 		<a href="#" role="button" id="take-photo" width="200px">Take Photo</a>
-		<canvas width="200px" height="200px" id="canvas"></canvas>
+		<canvas id="canvas"></canvas>
 	</div>
 	<form action="#">
 		<input type="file" name="image-up">
@@ -53,6 +58,7 @@
 		$('#up-hide').click(function(){$('#main-content').css('display', 'none')});
 		$('#camera-user-open').click(function(){
 			$('#main-content').toggle();
+			$('#video').css('display', 'block');
             var video = document.getElementById("video"),
             canvas = document.getElementById('canvas'),
             /*photo = document.getElementById('photo'),*/
@@ -79,7 +85,8 @@
              });
 
              document.getElementById('take-photo').addEventListener('click', function(){
-                 context.drawImage(video, 0, 0, 100, 100);
+             	 $('#video').css('display', 'none');	
+                 context.drawImage(video, 0, 0, 200, 200);
                  /*photo.setAttribute('src', canvas.toDataURL('image/png'));*/
              });
        
