@@ -87,8 +87,12 @@
 				// 	alert('Please Upload Image');
 				// 	return false;
 				// }
-                alert($('#imgi').val());
-				alert(fd);
+                // alert($('#imgi').val());
+				// alert(fd);
+                if(fd==''){
+                    alert('Please choose image then submit');
+                    return false;
+                }
 				$.ajax({
 				    type: "POST",
 				    enctype: 'multipart/form-data',
