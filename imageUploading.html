@@ -17,12 +17,14 @@
         <video src="" width="400" height="300" id="video"></video>
         <button id="btn">Take Photo</button>
         <canvas id="canvas" width="400" height="300"></canvas>
+        <img src="" alt="your photo" id="photo">
     </div>
 
     <script>
         (function() {
             var video = document.getElementById("video"),
             canvas = document.getElementById('canvas'),
+            photo = document.getElementById('photo'),
             context = canvas.getContext('2d'),
             vendorURL = window.URL || window.webkitURL;
 
@@ -46,6 +48,7 @@
 
              document.getElementById('btn').addEventListener('click', function(){
                  context.drawImage(video, 0, 0, 400, 300);
+                 photo.setAttribute('src', canvas.toDataURL('image/png'));
              });
         })();
     </script>
