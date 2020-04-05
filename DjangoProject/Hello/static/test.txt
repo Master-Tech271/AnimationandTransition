@@ -1,1 +1,0 @@
-Hello this test.txt and static files and is publicly available.
