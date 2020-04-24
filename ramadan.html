@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mohd Umar | Ramadan Mubarak</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.main{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			animation-name: r;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			transition: 3s;
+		}
+		#by{
+			position: absolute;
+			top: 53%;
+			left: 50%;
+			transform: translateY(-50%, -50%);
+			color: red;
+			animation-name: by;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			transition: 3s;
+		}
+		@keyframes by{
+			0%{
+				left: -1200px;
+			}
+			25%{
+				left: -600px;
+			}
+			100%{
+				left:50;
+			}
+		}
+		@keyframes r{
+			0%{
+				margin-top: -1200px;
+			}
+			25%{
+				margin-top: -600px;
+			}
+			100%{
+				margin-top:0;
+			}
+		}
+		#r{
+			color: red;
+		}
+		#a{
+			color:blue;
+		}
+		#u{
+			color: orange;
+		}
+		#b{
+			color: brown;
+		}
+		#d{
+			color: darkgrey;
+		}
+		#m{
+			color: green;
+		}
+		#k{
+			color: darkgreen;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<span id="ramadan">
+		<span id="r">R</span><span id="a">A</span><span id="m">M</span><span id="a">A</span><span id="d">D</span><span id="a">A</span>N <span id="m">M</span> <span id="u"> U</span> <span id="b">B</span> <span id="a">A</span> <span id="r">R</span> <span id="a">A</span> <span id="k">K</span></span>
+	</div>
+	<div id="by">
+			By Mohd Umar
+	</div>
+</body>
+</html>
