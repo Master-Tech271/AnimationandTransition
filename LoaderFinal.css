@@ -11,8 +11,8 @@
     top: 1%;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 200px;
+    max-height: 200px;
     display: block;
     margin: auto;
     border-radius: 50%;
